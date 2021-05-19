@@ -38,9 +38,9 @@ Custom Genesis file
 Next, open the terminal and run the following code snippet. This will instruct Geth to use genesis.json file to be the first block of your custom blockchain. We also specify a data directory where our private chain data will be stored. Choose a location on your computer (separate folder from the public Ethereum chain folder, if you have one) and Geth will create the data directory for you.</b>
 <br>
 <code>
-    geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/TestChain init /path_to_folder/genesis.json
+    geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/pblockchain init /path_to_folder/genesis.json
  </code>
- <li>Where TestChain is the folder where we stored the genesis.json file</li>
+ <li>Where pblockchain is the folder where we stored the genesis.json file</li>
  <img src="https://github.com/Apesin/Private-Blockchain/blob/main/screen1.png">
  <br>
  
@@ -52,3 +52,10 @@ Now your private network will go live.
 <br>
 After running the above snippet, the terminal gives the following result.
 <img src="https://github.com/Apesin/Private-Blockchain/blob/main/screen2.png">
+
+<br>
+
+ # Create Accounts
+Open another terminal window and run the following snippet to open Geth console.
+geth attach /path_to_your_data_directory/pblockchain/geth.ipc
+You will get a JavaScript console like the following.
