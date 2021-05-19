@@ -42,3 +42,12 @@ Next, open the terminal and run the following code snippet. This will instruct G
  </code>
  <li>Where TestChain is the folder where we stored the genesis.json file</li>
  <img src="https://github.com/Apesin/Private-Blockchain/blob/main/screen1.png">
+ 
+ <br>
+#  Create a Private Network
+<br>
+Next, we will start our private network to mine new blocks to our private chain. Run the following code snippet on your terminal. The parameter “networkid” is a unique id to identify our private blockchain network. The main Ethereum network has “1” as the networkid. Give any random number except “1” to create our unique network.
+geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/TestChain --networkid 123 --nodiscover
+Now your private network will go live. 
+<br>
+After running the above snippet, the terminal gives the following result.
