@@ -24,3 +24,13 @@ Custom Genesis file
     "config": {"chainId": 987, "homesteadBlock": 0, "eip155Block": 0, "eip158Block": 0, "eip150Block": 0}
 }
   </code>
+
+#Explanation on the config file;
+<li>chainId: A unique identifier of the new private blockchain</li>
+<li>homesteadBlock: Homestead is the first production release of Ethereum and since the developers are already using this version the value of this parameter can be left as ‘0’.</li>
+<li>eip155Block/eip158Block: EIP stands for “Ethereum Improvement Proposals”, these were implemented to release Homestead. In a private blockchain development, hard forks aren’t needed, hence the parameter value should be left as ‘0’.</li>
+<li>difficulty: Controls the complexity of the mining puzzle and a lower value enables quicker mining.</li>
+<li>gasLimit: Establishes an upper limit for executing smart contracts.</li>
+<li>alloc: Allows allocation of Ether to a specific address.</li>
+<b>Paste the above code in the genesis.json file and save it in a folder on your computer.
+Next, open the terminal and run the following code snippet. This will instruct Geth to use genesis.json file to be the first block of your custom blockchain. We also specify a data directory where our private chain data will be stored. Choose a location on your computer (separate folder from the public Ethereum chain folder, if you have one) and Geth will create the data directory for you.</b>
