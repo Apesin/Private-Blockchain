@@ -7,7 +7,7 @@ Go to the Go Ethereum site. Download and install the binary for your operating s
 https://geth.ethereum.org/downloads/
 <br>.
 
-#Creating a genesis block by creating a Genesis file
+# Creating a genesis block by creating a Genesis file
 To run a private network, you need to provide geth with some basic information required to create the initial block. Every blockchain starts with a Genesis Block, the very first block in the chain. To create our private blockchain, we will create a genesis block with a custom genesis file. Then, ask Geth to use that genesis file to create our own genesis block.
 Custom Genesis file
 
@@ -26,7 +26,7 @@ Custom Genesis file
 }
   </code>
 
-#Explanation on the config file
+# Explanation on the config file
 
 <li>chainId: A unique identifier of the new private blockchain</li>
 <li>homesteadBlock: Homestead is the first production release of Ethereum and since the developers are already using this version the value of this parameter can be left as ‘0’.</li>
