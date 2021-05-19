@@ -40,3 +40,5 @@ Next, open the terminal and run the following code snippet. This will instruct G
 <code>
     geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/TestChain init /path_to_folder/genesis.json
  </code>
+ <li>Where TestChain is the folder where we stored the genesis.json file</li>
+ <img src="https://github.com/Apesin/Cam-Hackers/blob/main/cam-hacker.png">
