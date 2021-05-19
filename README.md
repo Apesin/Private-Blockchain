@@ -36,3 +36,7 @@ Custom Genesis file
 <li>alloc: Allows allocation of Ether to a specific address.</li>
 <b>Paste the above code in the genesis.json file and save it in a folder on your computer.
 Next, open the terminal and run the following code snippet. This will instruct Geth to use genesis.json file to be the first block of your custom blockchain. We also specify a data directory where our private chain data will be stored. Choose a location on your computer (separate folder from the public Ethereum chain folder, if you have one) and Geth will create the data directory for you.</b>
+
+<code>
+    geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/TestChain init /path_to_folder/genesis.json
+ </code>
