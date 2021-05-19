@@ -41,4 +41,4 @@ Next, open the terminal and run the following code snippet. This will instruct G
     geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/TestChain init /path_to_folder/genesis.json
  </code>
  <li>Where TestChain is the folder where we stored the genesis.json file</li>
- <img src="https://github.com/Apesin/Private-Blockchain/blob/main/Screenshot 2021-05-19 160429.png">
+ <img src="https://github.com/Apesin/Private-Blockchain/blob/main/screenshots/Screenshot 2021-05-19 160429.png">
