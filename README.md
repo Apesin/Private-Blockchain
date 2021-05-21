@@ -1,4 +1,4 @@
-# Public-Blockchain
+# Private-Blockchain
 You will learn how to create a private blockchain.
 <b>Setting up the environment</b>
 First, you need to install Geth which is a command-line interface (CLI) tool that communicates with the Ethereum network and acts as the link between your computer and the rest of the Ethereum nodes.
