@@ -108,3 +108,9 @@ geth --mine --rpc --networkid 123 --datadir /path_to_your_data_directory/pblockc
 geth attach ipc:\\.\pipe\geth.ipc
 </code>
 <br>
+
+The console connects to the mining node over ipc. ipc (inter-process communications) works on the local computer. In this case geth creates an ipc pipe (which is represented by the file path_to_your_directory/geth.ipc) on local computer’s filesystem — and console makes the connection to that node over ipc. 
+<br>
+
+# View All Accounts
+Once you are connected to the geth console, you can try out the following command to list all the available accounts
