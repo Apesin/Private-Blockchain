@@ -57,17 +57,30 @@ After running the above snippet, the terminal gives the following result.
 
  # Create Accounts
 To create an account simply enter the following snippet in your console
+<br>
 <code>
 geth account new --datadir /path/to/data/dir/pblockchain
 </code>
 on success anew wallet will be created.
 
 <br>
-# Start Mining All set! 
+# Start Mining 
 Now we can start mining with geth using the following command. The networkid parameter here differentiates this ethereum network from the others. All the miners who want to connect to this network, have to use the same networkid along with the same genesis block. Here my network id is 123
+<br>
 <code>
 geth --mine --rpc --networkid 123 --datadir /path_to_your_data_directory/pblockchain
 </code>
+<br>
+<linetworkid: network identifier of this ethereum network. You pick a value you want. For example: olympic (0), frontier (1), morden (2), ropsten(3). mine: enables mining. rpc: enables an HTTP-RPC server. Wallet applications can connect to this mining node over http.</li>
+<br>
+<li>rpcaddr: specifies the HTTP-RPC server listening interface (default: “localhost”)</li>
+<li>rpcport: specifies the HTTP-RPC server listening port (default: 8545)</li>
+<li>rpcapi: specifies the API’s offered over the HTTP-RPC interface (default: “eth,net,web3”).</li>
+
+
+
+
 <code>
 geth attach ipc:\\.\pipe\geth.ipc
 </code>
+<br>
