@@ -114,3 +114,11 @@ The console connects to the mining node over ipc. ipc (inter-process communicati
 
 # View All Accounts
 Once you are connected to the geth console, you can try out the following command to list all the available accounts
+<code>eth.accounts</code>
+<br>
+
+# View Account Balance
+Following command shows how to view the balance of a given account from the geth console.
+<code>
+eth.getbalance("put_the_wallet_address_you_will_like_to_get_its_balance_here")
+</code>
