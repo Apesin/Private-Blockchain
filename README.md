@@ -47,7 +47,7 @@ Next, open the terminal and run the following code snippet. This will instruct G
 # Create a Private Network
 <br>
 Next, we will start our private network to mine new blocks to our private chain. Run the following code snippet on your terminal. The parameter “networkid” is a unique id to identify our private blockchain network. The main Ethereum network has “1” as the networkid. Give any random number except “1” to create our unique network.
-geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/TestChain --networkid 123 --nodiscover
+geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/pblockchain --networkid 123 --nodiscover
 Now your private network will go live. 
 <br>
 After running the above snippet, the terminal gives the following result.
@@ -64,9 +64,10 @@ on success anew wallet will be created.
 
 <br>
 # Start Mining All set! 
-<br>
-Now we can start mining with geth using the following command. The networkid parameter here differentiates this ethereum network from the others. All the miners who want to connect to this network, have to use the same networkid along with the same genesis block.
-
+Now we can start mining with geth using the following command. The networkid parameter here differentiates this ethereum network from the others. All the miners who want to connect to this network, have to use the same networkid along with the same genesis block. Here my network id is 123
+<code>
+geth --mine --rpc --networkid 123 --datadir /path_to_your_data_directory/pblockchain
+</code>
 <code>
 geth attach ipc:\\.\pipe\geth.ipc
 </code>
