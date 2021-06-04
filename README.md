@@ -28,10 +28,10 @@ Custom Genesis file
 
 # Explanation on the config file
 
-<li>chainId: A unique identifier of the new private blockchain</li>
+<li>chainId: A unique identifier of the new private blockchain. This provides a way to send transactions that work on ethereum without working on ETC (ethereum classic) or the Morden testnet. EIP 155 suggests following chainid values for different networks: ethereum mainnet (1), morden /expanse mainnet (2), ropsten (3), rinkeby (4), rootstock mainnet (30), rootstock testnet (31), kovan (42), ethereum classic mainnet (61), ethereum classic testnet (62), geth private chains (1337 by default). In our example we have used 15, which is not used by any of these networks.</li>
 <li>homesteadBlock: Homestead is the first production release of Ethereum and since the developers are already using this version the value of this parameter can be left as ‘0’.</li>
 <li>eip155Block/eip158Block: EIP stands for “Ethereum Improvement Proposals”, these were implemented to release Homestead. In a private blockchain development, hard forks aren’t needed, hence the parameter value should be left as ‘0’.</li>
-<li>difficulty: Controls the complexity of the mining puzzle and a lower value enables quicker mining.</li>
+<li>difficulty: Controls the complexity of the mining puzzle and a lower value enables quicker mining. Gas is the internal pricing for running a transaction or contract in ethereum. Each instruction sent to the Ethereum Virtual Machine (EVM) to process a transaction or smart contract costs a specific amount of gas. If the required amount of gas is not provided to the transaction, it will fail before completion. When you do any ethereum transaction, you specify a gas limit — that is the maximum gas all the operations corresponding to that transaction can consume. The gasLimit parameter in the block specifies, the aggregated gasLimit from all the transactions included in the block.</li>
 <li>gasLimit: Establishes an upper limit for executing smart contracts.</li>
 <li>alloc: Allows allocation of Ether to a specific address.</li>
 <b>Paste the above code in the genesis.json file and save it in a folder on your computer.
@@ -56,6 +56,16 @@ After running the above snippet, the terminal gives the following result.
 <br>
 
  # Create Accounts
-Open another terminal window and run the following snippet to open Geth console.
-geth attach /path_to_your_data_directory/pblockchain/geth.ipc
-You will get a JavaScript console like the following.
+To create an account simply enter the following snippet in your console
+<code>
+geth account new --datadir /path/to/data/dir/pblockchain
+</code>
+on success anew wallet will be created.
+
+<br>
+# Start Mining All set! <br>
+Now we can start mining with geth using the following command. The networkid parameter here differentiates this ethereum network from the others. All the miners who want to connect to this network, have to use the same networkid along with the same genesis block.
+
+<code>
+geth attach ipc:\\.\pipe\geth.ipc
+</code>
