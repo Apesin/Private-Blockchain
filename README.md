@@ -120,5 +120,9 @@ Once you are connected to the geth console, you can try out the following comman
 # View Account Balance
 Following command shows how to view the balance of a given account from the geth console.
 <code>
-eth.getbalance("put_the_wallet_address_you_will_like_to_get_its_balance_here")
+eth.getBalance("put_the_wallet_address_you_will_like_to_get_its_balance_here")
 </code>
+<br>
+
+# Connect MetaMask
+Ethereum Wallet MetaMask is an ethereum wallet, running as a chrome extension. It injects the ethereum web3 API into every website’s javascript context, so that those apps can read from the blockchain. MetaMask also lets the user create and manage their own identities, so when an application wants to perform a transaction and write to the blockchain, the user gets a secure interface to review the transaction, before approving or rejecting it. To connect MetaMask to the private ethereum blockchain, we need to pick the right host name and the port. Web3 API is the ethereum javascript API implemented in web3.js. To talk to an ethereum node from a javascript application, MetaMask uses the web3.js library, which gives a convenient interface for the rpc methods. Under the hood it communicates to a local node through rpc calls. web3.js works with any ethereum node, which exposes an rpc layer. You might have noticed in the above, when we start the mining node, we can pass the parameter rpcapi to specify, which interfaces we need to expose from that node. By default, if you do not specify anything, eth,net,web3 — will be exposed.
