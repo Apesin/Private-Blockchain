@@ -63,7 +63,8 @@ geth account new --datadir /path/to/data/dir/pblockchain
 on success anew wallet will be created.
 
 <br>
-# Start Mining All set! <br>
+# Start Mining All set! 
+<br>
 Now we can start mining with geth using the following command. The networkid parameter here differentiates this ethereum network from the others. All the miners who want to connect to this network, have to use the same networkid along with the same genesis block.
 
 <code>
