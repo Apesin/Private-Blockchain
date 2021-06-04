@@ -64,7 +64,8 @@ geth account new --datadir /path/to/data/dir/pblockchain
 on success anew wallet will be created.
 
 <br>
-# Start Mining 
+
+ # Start Mining 
 Now we can start mining with geth using the following command. The networkid parameter here differentiates this ethereum network from the others. All the miners who want to connect to this network, have to use the same networkid along with the same genesis block. Here my network id is 123
 <br>
 <code>
@@ -76,10 +77,33 @@ geth --mine --rpc --networkid 123 --datadir /path_to_your_data_directory/pblockc
 <li>rpcaddr: specifies the HTTP-RPC server listening interface (default: “localhost”)</li>
 <li>rpcport: specifies the HTTP-RPC server listening port (default: 8545)</li>
 <li>rpcapi: specifies the API’s offered over the HTTP-RPC interface (default: “eth,net,web3”).</li>
+<br>
 
-
-
-
+<code>
+    --rpcapi "web3,eth"
+    </code>
+ <li>rpccorsdomain: enables CORS by specifying a comma separated list of domains from which to accept cross origin requests. This is useful when using browser based solidity editors (remix) to deploy smart contracts or browser based wallets. For example, following will accept CORS from any domain</li>
+ <br>
+ 
+ <code>
+    --rpccorsdomain "*"
+    </code>
+    
+   <li>nodiscover: disables the peer discovery mechanism. None of the other nodes in the network will not be able to find your node. If you intend to have this private blockchain being used within your local network with others, do not use this parameter</li>
+   <li>console: with this command we can start the mining node with an interactive javascript environment. We will learn more about this in the next section.</li>
+   <br>
+    
+   <code>geth --mine --rpc --networkid 1999 --datadir /path/to/data/dir console</code>
+   
+   <br>
+   
+   # Attach Geth Console
+   Either you can start the mining node as a console — or you run the console separately and attach it to a mining node, with the attach command. The following shows how to do it, and make sure you follow the same parameter order
+   <br>
+   
+  <code>geth --datadir /path_to_your_directory/pblockchain attach ipc:/path_to_your_directory/pblockchain /geth.ipc</code>
+  <br>
+  Incase the snippet above did not work try this one below, it usually happens on windows 10. Also make sure your Geth is running before you enter this command
 <code>
 geth attach ipc:\\.\pipe\geth.ipc
 </code>
