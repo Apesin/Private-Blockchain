@@ -167,3 +167,11 @@ Following command will do the funds transfer — it refers the variables we defi
  <code>
  git clone https://github.com/Apesin/explorer
  </code>
+ 
+<br>
+
+To connect ethereum block explorer to our local blockchain, make sure that you have started your mining node with the following command, with the highlighted parameter — the meaning of this parameter was discussed before.
+
+<code>
+geth --mine --rpc --rpccorsdomain "*" --networkid <networkd-id> -- datadir <path_to_your_directory>
+</code>
