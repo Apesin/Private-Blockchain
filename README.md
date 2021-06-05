@@ -136,3 +136,34 @@ Ether MetaMask will create you an ethereum account — a private key and an ethe
 
 <br>
 personal is a management API provided by geth. In addition to personal, geth also provides management APIs: admin, debug, miner and txpool. Once we unlock the account, we can define three variables in the console, for the sender, receiver and amount to be sent. The value of the sender is the ethereum address we created at the very beginning of this tutorial, and the value of the receiver is the ethereum address created under MetaMask.
+<br>
+
+<code>
+    > var sender = "0x7a69b359e86893efa3d9732e4c65ced51567edd0"; 
+    > var receiver = "0xA9f28458eE1170F285440990c196c1592D3a73f5" 
+    > var amount = web3.toWei(1, "ether")
+    </code>
+<br>
+Following command will do the funds transfer — it refers the variables we defined above
+<code>
+    > eth.sendTransaction({from:sender, to:receiver, value: amount})
+    </code>
+    
+<br>
+    
+ # View Account Balance In MetaMask
+   Once we completed the funds transfer following the above steps, you can find the account balance in two ways. One way is directly from the MetaMask plugin, as shown below
+   
+   <br>
+   The other way is via the geth console, with the following command. 
+   <code> > eth.getBalance("0xA9f28458eE1170F285440990c196c1592D3a73f5") 1000000000000000000 </code>
+   
+   <br>
+   # Ethereum Block Explorer
+   You may be familiar with etherscan, which gives a lot of insights into the ethereum public blockchain. But we cannot use it to point to our local blockchain. Ethereum block explorer even though not as feature rich as etherscan, is quite useful to find out what is going on in our local blockchain. To setup ethereum block explorer first we need to get its source code from the following git repo
+   <br>
+   
+   <code>
+    git clone https://github.com/carsenk/explorer
+    
+    </code>
