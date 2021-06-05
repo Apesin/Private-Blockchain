@@ -129,3 +129,10 @@ Ethereum Wallet MetaMask is an ethereum wallet, running as a chrome extension. I
 
 # Transfer
 Ether MetaMask will create you an ethereum account — a private key and an ethereum address. Following shows you how to transfer ether from the first account you created at the very beginning to the MetaMask account, from the geth console. To transfer funds from an account, we have to use that account’s private key for the signature. To use the private key, we need to unlock it, as shown below.
+
+<code>
+     personal.unlockAccount( "your_wallet_address","password")
+    </code>
+
+<br>
+personal is a management API provided by geth. In addition to personal, geth also provides management APIs: admin, debug, miner and txpool. Once we unlock the account, we can define three variables in the console, for the sender, receiver and amount to be sent. The value of the sender is the ethereum address we created at the very beginning of this tutorial, and the value of the receiver is the ethereum address created under MetaMask.
