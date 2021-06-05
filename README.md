@@ -159,11 +159,11 @@ Following command will do the funds transfer — it refers the variables we defi
    <code> > eth.getBalance("0xA9f28458eE1170F285440990c196c1592D3a73f5") 1000000000000000000 </code>
    
    <br>
+   
    # Ethereum Block Explorer
    You may be familiar with etherscan, which gives a lot of insights into the ethereum public blockchain. But we cannot use it to point to our local blockchain. Ethereum block explorer even though not as feature rich as etherscan, is quite useful to find out what is going on in our local blockchain. To setup ethereum block explorer first we need to get its source code from the following git repo
    <br>
    
-   <code>
-    git clone https://github.com/carsenk/explorer
-    
-    </code>
+ <code>
+ git clone https://github.com/Apesin/explorer
+ </code>
