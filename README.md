@@ -40,6 +40,12 @@ Next, open the terminal and run the following code snippet. This will instruct G
 <code>
     geth --rpc --rpcport "8085" --datadir /path_to_your_data_directory/pblockchain init /path_to_folder/genesis.json
  </code>
+ 
+ or 
+ 
+ <code>
+ geth --datadir /Documents/btcaBlockchain init genesis.json
+ </code>
  <li>Where pblockchain is the folder where we stored the genesis.json file</li>
  <img src="https://github.com/Apesin/Private-Blockchain/blob/main/screen1.png">
  <br>
