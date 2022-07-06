@@ -108,6 +108,11 @@ geth --mine --rpc --networkid 123 --datadir /path_to_your_data_directory/pblockc
    
    <br>
    
+   or
+   <code>
+   geth --datadir=/Documents/btcaBlockchain console
+   </code>
+   
    # Attach Geth Console
    Either you can start the mining node as a console — or you run the console separately and attach it to a mining node, with the attach command. The following shows how to do it, and make sure you follow the same parameter order
    <br>
